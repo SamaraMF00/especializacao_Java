@@ -13,6 +13,7 @@ public class Livro {
     }
 
     public double calculaDireitosAutorais(){
-        return this.precoBase * PERCDIREIAUTORAIS; 
+        return this.precoBase * PERCDIREIAUTORAIS * copiasVendidas; 
     }
+
 }
