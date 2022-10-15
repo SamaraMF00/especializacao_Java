@@ -25,7 +25,7 @@ public class LojaVirtual {
  * @throws Exception caminho não encontrado
  */   
     public void carregarDadosLivro(String nomeArquivo) throws Exception {
-        Path path = Paths.get(nomeArquivo);
+        Path path = Paths.get(getCurrentDirectory() + nomeArquivo);
         Scanner scanner = new Scanner(path, "UTF-8");
 
         while (scanner.hasNextLine()) {
@@ -47,6 +47,14 @@ public class LojaVirtual {
         }
         scanner.close();
     }
+
+/**
+ * Busca o caminho da pasta atual
+ * @return caminho da pasta
+ */
+	private String getCurrentDirectory() {
+		return this.getClass().getClassLoader().getResource("").getHost();
+	}
 
 /**
  * Busca os dados de um autor, caso não exista, cria um novo.

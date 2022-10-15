@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class App {
 
 //#region variáveis
-    private static final String CAMINHOARQUIVOLEITURA = "C:/Users/Cliente Vip Infomac/Desktop/PUC/PM/TPM/especializacao_Java/Livros/src/LIVROSPM.txt";
+    private static final String NOMEARQUIVOLEITURA = "LIVROS_PM.txt";
     private static LojaVirtual lojaVirt = new LojaVirtual();
     static Scanner entrada = new Scanner(System.in, "UTF-8");
 //#endregion
@@ -143,7 +143,7 @@ public class App {
  * @throws Exception Arquivo não encontrado
  */
     private static void carregarArquivoLivros() throws Exception {
-        lojaVirt.carregarDadosLivro(CAMINHOARQUIVOLEITURA);
+        lojaVirt.carregarDadosLivro(NOMEARQUIVOLEITURA);
     }
 
 //#endregion
