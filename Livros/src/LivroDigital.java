@@ -1,4 +1,4 @@
-public class LivroVirtual extends Livro {
+public class LivroDigital extends Livro {
     @Override
     public double precoVenda(){
         return precoBase;

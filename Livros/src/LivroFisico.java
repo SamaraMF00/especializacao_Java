@@ -1,23 +1,32 @@
 public class LivroFisico extends Livro {
 
+//#region atributos
     private static final double VALORIMPPAG = 0.03;
     private double vlrEncadernacao;
+//#endregion
 
+//#region construtor
     LivroFisico (double encadernacao, int paginas){
         this.vlrEncadernacao = encadernacao;
         this.quantPaginas = paginas;
     }
+//#endregion
+
+//#region métodos
 
     @Override
     public double precoVenda(){
         return precoBase + precoImpressao() + vlrEncadernacao;
     }
 
+/**
+ * Calcula o preço gasto com a impressão de um livro físico.
+ * @return valor da impressão
+ */
     private double precoImpressao(){
         return quantPaginas * VALORIMPPAG;
     }
-
-    
+   
     @Override
     public String toString(){
         this.toString();
@@ -36,4 +45,6 @@ public class LivroFisico extends Livro {
 
         return livro.toString();
     }
+
+//#endregion
 }
